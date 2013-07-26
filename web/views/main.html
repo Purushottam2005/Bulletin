@@ -1,0 +1,15 @@
+<div id="articles">
+    <button ng-click="publish()">Publish New</button>
+    <article ng-repeat="post in posts | orderBy:'-publishDate'">
+        <header>
+            <h1> {{ post.title }}</h1>
+            <ul class="meta-info">
+                <li><span class="meta-key">Author: </span><span class="meta-value">{{ post.author }}</span></li>
+                <li><span class="meta-key">Published: </span><span class="meta-value">{{ post.publishDate|date:'short' }}</span></li>
+            </ul>
+        </header>
+        <section class="post">
+            {{ post.text }}
+        </section>
+    </article>
+</div>

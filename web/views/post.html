@@ -1,0 +1,16 @@
+<div>
+    <h1>Publish New Post</h1>
+    <div>
+        <table>
+            <form>
+                <label for="title">Title</label><br/>
+                <input type="text" name="title" id="title" size="50" required ng-model="newPost.title"><br/>
+                <label for="title">Author</label><br/>
+                <input type="text" name="author" id="author" size="50" required ng-model="newPost.author"><br>
+                <label for="body">Body</label><br>
+                <textarea name="body" id="body" cols="40" rows="10" ng-model="newPost.text"></textarea><br/>
+                <button ng-click="create()">Publish</button>
+            </form>
+        </table>
+    </div>
+</div>

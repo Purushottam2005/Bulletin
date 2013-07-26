@@ -1,0 +1,25 @@
+
+.meta-info {
+    list-style-type: none;
+    padding: 0px;
+    margin: -18px 0px 15px 0px;
+    font-family: sans-serif;
+    font-size: small;
+}
+
+.meta-key {
+    font-weight: bold;
+}
+
+.meta-value {
+    font-style: oblique;
+}
+
+.meta-info li {
+    display: inline;
+}
+
+.post {
+    font-family: sans-serif;
+    clear: both;
+}
