@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
+ * Post Object.
+ *
  * @author Edwin Dalorzo
  */
 @Entity
@@ -15,6 +17,10 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
+
+    /**
+     * Author of this post
+     */
     private String author;
     private Date publishDate;
     private String title;

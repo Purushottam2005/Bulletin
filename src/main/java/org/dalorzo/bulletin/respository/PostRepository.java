@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * @author Edwin Dalorzo
  */
-public interface PostRepository extends JpaRepository<Post, Long> {
+public interface PostRepository extends JpaRepository<Post, Long>, PostRepositoryCustom {
     List<Post> findByAuthor(String author);
 
     @Transactional

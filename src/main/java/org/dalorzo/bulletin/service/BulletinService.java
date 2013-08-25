@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Calendar;
 import java.util.Collection;
 
 /**
@@ -28,7 +29,12 @@ public class BulletinService {
     @RequestMapping(value="/post/{author}", method = RequestMethod.GET, produces = "application/json")
     @ResponseBody
     public Collection<Post> getPostByAuthor(@PathVariable String author){
-        return postRepository.findByAuthor(author);
+        //return postRepository.findByAuthor(author);
+        Calendar start = Calendar.getInstance();
+        Calendar end = Calendar.getInstance();
+        start.add(Calendar.DATE, -30);
+        end.add(Calendar.DATE, 30);
+        return postRepository.allPostsForAuthorWithinDates(author,start.getTime(), end.getTime());
     }
 
     @RequestMapping(value="post", method = RequestMethod.POST, consumes = "application/json", produces = "application/json")
